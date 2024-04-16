@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+</head>
+<body>
+  
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+  
+  let compChoice = computerChoosen();
+  let rel = rateM(`Bat`,compChoice);
+  resultM(`Bat`,compChoice,rel);
+  
+  ">Bat</button>
+
+  <button onclick="
+  compChoice = computerChoosen();
+  user = rateM(`Ball`,compChoice); 
+  resultM(`Ball`,compChoice,rel);
+  ">Ball</button>
+
+  <button onclick="
+
+  compChoice = computerChoosen();
+  user = rateM(`Stump`,compChoice);
+  resultM(`Stump`,compChoice,rel);
+  ">Stump</button>
+
+<script>
+  
+  function computerChoosen(){
+  // This will generate random number between 0 to 3
+  let ranN = Math.random() * 3;
+  let randomNumber = Math.round(ranN);
+  let computerChoice; // This is a Global Veriable
+  if(randomNumber>= 0 && randomNumber<=1){
+    return 'Bat';
+    
+  }else if(randomNumber>=2 && randomNumber<3){
+    return 'Ball';
+    
+  }else{
+    return 'Stump';
+    
+  }
+  }
+  
+  function rateM(user, computer){
+    if(user===`Bat`){
+      if(computer==='Ball'){
+        return 'User Won.';
+      }else if(computer === 'Bat'){
+        return `It's a tie`;
+      }else if(computer === 'Stump'){
+        return 'Computer has won';
+      }
+    }else if(user === `Ball`){
+      if(computer==='Ball'){
+        return `It's a tie`;
+      }else if(computer === 'Bat'){
+        return 'Computer has won';
+      }else if(computer==='Stump'){
+        return 'User Won.';
+      }
+    }else if(user === `Stump`){
+      if(computer==='Ball'){
+        return 'Computer has won';
+      }else if(computer === 'Bat'){
+        return 'User Won.';
+      }else if(computer === 'Stump'){
+        return `It's a tie`;
+      }
+    }
+  }
+  function resultM(a,b,c){
+    alert(`You have chosen ${a}. Computer Choice is ${b} and ${c}`);
+  }
+  /*
+  function getResult(userChoice, computerChoice){
+    if(userChoice===computerChoice){
+      return `It's a tie`;
+    }else if(userChoice===`Ball` && computerChoice===`Bat`){
+      return `Computer has won`;
+    }else{
+      return `User won`;
+    }
+  }
+  */
+  /*
+  function resultMsg (){
+    if(){
+
+    }else if{
+
+    }else{
+      
+    }
+  }
+  */
+</script> 
+</body>
+</html>

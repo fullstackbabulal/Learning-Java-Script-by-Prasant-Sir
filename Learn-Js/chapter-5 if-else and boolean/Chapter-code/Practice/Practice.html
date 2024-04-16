@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Exarcise of if-else and Boolean</title>
+</head>
+<body>
+  
+  <script>
+    let randomNumber = Math.random()*65;
+    let age = Math.round(randomNumber);
+    let gender = 'Female';
+    let percentage
+    if(age<=5){
+      percentage=100;
+    }else if(age>5 && age<=8){
+      percentage=50;
+    }else if(gender==='Female'){
+      percentage=50;
+    }else if(age>=65){
+      percentage=30;
+    }else{
+      percentage=0;
+    }
+    console.log(`Your Final Discount is ${percentage}%`);
+  </script>
+</body>
+</html>

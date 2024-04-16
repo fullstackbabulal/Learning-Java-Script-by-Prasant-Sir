@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Practise Exacies</title>
+</head>
+<body>
+  <script>
+    // Find Odd Even Number
+    function oddEven(number){
+      if(number%2===0){
+        return `Even Number`;
+      }else{
+        return `Odd Number`;
+      }
+    }
+    console.log(oddEven(5));
+    // Larger of Two Number
+    function largerOfTwoNumber(a,b){
+      if(a>b){
+        return `${a} is Larger Number`;
+      }else if(b>a){
+        return `${b} is Larger Number`;
+      }
+    }
+    console.log(largerOfTwoNumber(12,20));
+
+    //Write a function to convert Celsius to Fahrenheit
+    function toFahrenheit(celsiusValue){
+      return 9/5*celsiusValue+32;
+    }
+    console.log(toFahrenheit(24));
+
+    //Write a function to find the area of a given Rectangle
+    function rectangleArea(a,b) {
+  return `The area of rectangle is ${a*b}`;
+}
+
+console.log(rectangleArea(10,20)) //The area of rectangle is 200
+console.log(rectangleArea(30,30)) //The area of rectangle is 900
+/*
+Write a function to find the area and perimeter of a Circle
+Function `circleValues()` returns the perimeter and area of the circle provided the radius as an argument for the function call.
+*/
+function circleValues(rad) {
+  return `Perimeter: ${2*Math.PI*rad}, Area: ${Math.PI*rad*rad}`;
+}
+
+console.log(circleValues(10)) //"Perimeter: 62.83, Area: 314.15"
+console.log(circleValues(15)) //"Perimeter: 94.24, Area: 706.85"
+console.log(circleValues(25)) //"Perimeter: 157.07, Area: 1963.49"
+
+/*
+Write a function to reverse a number
+Function `reverseNum()` returns the reversed number for the given argument number value. 
+*/
+function reverseNum(num) {
+  var reverse = 0;
+  while(num != 0)
+  {
+    reverse = reverse * 10;
+    reverse = reverse + num%10;
+    num = Math.trunc(num/10); // Remove decimal places
+  }
+  return reverse;
+}
+
+console.log(reverseNum(123)) //321
+console.log(reverseNum(5872)) //2785
+  </script>
+</body>
+</html>
