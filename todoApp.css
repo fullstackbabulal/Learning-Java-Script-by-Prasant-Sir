@@ -1,0 +1,40 @@
+.main h1{
+  
+  text-align: center;
+  text-decoration: underline;
+}
+.input-element{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+  
+}
+#todo-input{
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+#date-input{
+  margin: 0 3%;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+#add-button{
+  font-size: 1.5rem;
+  border-radius: 8px;
+
+}
+#mitem{
+  width: 100%;
+}
+#Item{
+  font-size: 1.5rem;
+}
+#Date{
+  font-size: 1.5rem;
+  margin: 0 3%;
+}
+#delete-button{
+  font-size: 1.5rem;
+  margin: 0 3%;
+}
